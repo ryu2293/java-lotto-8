@@ -1,4 +1,9 @@
-package lotto;
+package lotto.service;
+
+import lotto.domain.Lotto;
+import lotto.domain.LottoRank;
+import lotto.domain.LottoResult;
+import lotto.domain.WinningLotto;
 
 import java.util.EnumMap;
 import java.util.List;

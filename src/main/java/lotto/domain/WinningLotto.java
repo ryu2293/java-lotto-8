@@ -1,4 +1,6 @@
-package lotto;
+package lotto.domain;
+
+import lotto.util.Constants;
 
 public class WinningLotto {
     private final Lotto lotto;

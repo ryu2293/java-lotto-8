@@ -1,5 +1,6 @@
-package lotto;
+package lotto.domain;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +10,7 @@ class LottoRankTest {
     @DisplayName("일치 개수와 보너스 여부로 정확한 등수를 반환한다.")
     @Test
     void valueOf() {
-        assertThat(LottoRank.valueOf(6, false)).isEqualTo(LottoRank.FIRST);
+        Assertions.assertThat(LottoRank.valueOf(6, false)).isEqualTo(LottoRank.FIRST);
         assertThat(LottoRank.valueOf(5, true)).isEqualTo(LottoRank.SECOND);
         assertThat(LottoRank.valueOf(5, false)).isEqualTo(LottoRank.THIRD);
         assertThat(LottoRank.valueOf(4, false)).isEqualTo(LottoRank.FOURTH);
