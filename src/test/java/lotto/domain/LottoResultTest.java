@@ -12,7 +12,7 @@ class LottoResultTest {
     @Test
     void calculateProfitRate() {
         Map<LottoRank, Integer> ranks = new EnumMap<>(LottoRank.class);
-        ranks.put(LottoRank.FIFTH, 1); 
+        ranks.put(LottoRank.FIFTH, 1);
         LottoResult result = new LottoResult(ranks);
 
         int purchaseAmount = 8000;
