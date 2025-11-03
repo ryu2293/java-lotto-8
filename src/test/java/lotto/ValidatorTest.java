@@ -33,4 +33,13 @@ class ValidatorTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR] 구입 금액은 1,000원 단위여야 합니다.");
     }
+
+    @DisplayName("보너스 번호가 1~45 범위를 벗어나면 예외가 발생한다.")
+    @ParameterizedTest
+    @ValueSource(ints = {0, 46})
+    void validateBonusNumberRange_OutOfRange(int bonusNumber) {
+        assertThatThrownBy(() -> Validator.validateBonusNumber(bonusNumber))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("[ERROR] 보너스 번호는 1부터 45 사이의 숫자여야 합니다.");
+    }
 }

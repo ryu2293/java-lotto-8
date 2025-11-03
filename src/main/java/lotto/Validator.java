@@ -29,4 +29,10 @@ public class Validator {
                     + String.format("%,d", Constants.LOTTO_PRICE) + "원 단위여야 합니다.");
         }
     }
+
+    public static void validateBonusNumber(int bonusNumber) {
+        if (bonusNumber < 1 || bonusNumber > 45) {
+            throw new IllegalArgumentException(Constants.ERROR_PREFIX + "보너스 번호는 1부터 45 사이의 숫자여야 합니다.");
+        }
+    }
 }
